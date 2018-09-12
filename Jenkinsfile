@@ -21,6 +21,7 @@ pipeline {
           container('nodejs') {
             sh "npm install"
             sh "npm build"
+            sh "echo create build"
             sh "CI=true DISPLAY=:99 npm test"
 
             sh 'export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml'
@@ -59,6 +60,7 @@ pipeline {
           container('nodejs') {
             sh "npm install"
             sh "npm build"
+            sh "echo build release"
             sh "CI=true DISPLAY=:99 npm test"
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
