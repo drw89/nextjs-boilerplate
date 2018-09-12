@@ -1,21 +1,35 @@
 
-var http = require('http');
-var fileSystem = require('fs');
+const express = require('express')
+const next = require('next')
 
-var server = http.createServer(function(req, resp){
-	fileSystem.readFile('./index.html', function(error, fileContent){
-		if(error){
-			resp.writeHead(500, {'Content-Type': 'text/plain'});
-			resp.end('Error');
-		}
-		else{
-			resp.writeHead(200, {'Content-Type': 'text/html'});
-			resp.write(fileContent);
-			resp.end();
-		}
-	});
-});
+const port = parseInt(process.env.PORT, 10) || 8080
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
+const handle = app.getRequestHandler()
 
-server.listen(8080);
+app.prepare()
+  .then(() => {
+    const server = express()
 
+    server.get('/a', (req, res) => {
+      return app.render(req, res, '/b', req.query)
+    })
+
+    server.get('/b', (req, res) => {
+      return app.render(req, res, '/a', req.query)
+    })
+
+    server.get('/posts/:id', (req, res) => {
+      return app.render(req, res, '/posts', { id: req.params.id })
+    })
+
+    server.get('*', (req, res) => {
+      return handle(req, res)
+    })
+
+    server.listen(port, (err) => {
+      if (err) throw err
+      console.log(`> Ready on http://localhost:${port}`)
+    })
+  })
 
