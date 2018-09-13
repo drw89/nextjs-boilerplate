@@ -11,5 +11,5 @@ module.exports = withSass({
       loader: 'raw-loader',
     });
     return config;
-  }
+  },
 });

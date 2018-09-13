@@ -16,7 +16,7 @@ describe('GenericTable', () => {
       { title: 'date' },
       { title: 'location' },
       { title: 'drink' },
-      { title: 'amount' }
+      { title: 'amount' },
     ];
 
     const table = tables[1];
@@ -26,7 +26,7 @@ describe('GenericTable', () => {
   });
 
   it('should return an empty array', () => {
-    const result = getHeadRow({tableId: 'id', body:[], head: []});
+    const result = getHeadRow({ tableId: 'id', body: [], head: [] });
     expect(result).toEqual([]);
   });
 });

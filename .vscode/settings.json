@@ -1,0 +1,18 @@
+{
+  // for prettier
+  "prettier.eslintIntegration": true,
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  
+  // for stylelint
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "stylelint.enable": true,
+  
+  // general
+  "cSpell.enabled": false,
+  "javascript.implicitProjectConfig.experimentalDecorators": true
+  }
