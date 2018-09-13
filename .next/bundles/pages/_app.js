@@ -1,7 +1,7 @@
 module.exports =
 __NEXT_REGISTER_PAGE('/_app', function() {
           var comp =
-      webpackJsonp([2],{
+      webpackJsonp([3],{
 
 /***/ "./node_modules/@babel/runtime/helpers/extends.js":
 /***/ (function(module, exports, __webpack_require__) {
@@ -74,7 +74,7 @@ var _inherits2 = _interopRequireDefault(__webpack_require__("./node_modules/@bab
 
 var _react = _interopRequireWildcard(__webpack_require__("./node_modules/react/index.js"));
 
-var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/prop-types/index.js"));
+var _propTypes = _interopRequireDefault(__webpack_require__("./node_modules/next/node_modules/prop-types/index.js"));
 
 var _shallowEquals = _interopRequireDefault(__webpack_require__("./node_modules/next/dist/lib/shallow-equals.js"));
 
@@ -298,7 +298,7 @@ module.exports = __webpack_require__("./node_modules/next/app.js")
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("./node_modules/next/dist/pages/_app.js");
@@ -306,7 +306,7 @@ module.exports = __webpack_require__("./node_modules/next/dist/pages/_app.js");
 
 /***/ })
 
-},[1])
+},[2])
           return { page: comp.default }
         })
       ;

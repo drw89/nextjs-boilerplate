@@ -1,17 +1,90 @@
 {
-  "name": "DASHBOARD",
+  "name": "dashboard-boilerplate",
+  "author": "Interdiscount",
   "version": "1.0.0",
-  "description": "Simple Hello World that listens on localhost:8080",
+  "description": "Simple React boilerplate used for micro-services dashboards at Interdiscount",
+  "keywords": [
+    "React",
+    "Next.js",
+    "Dashboard",
+    "Microspot",
+    "Interdiscount"
+  ],
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "./node_modules/.bin/jest",
+    "test:fast": "./node_modules/.bin/jest -o",
+    "test:watch": "./node_modules/.bin/jest --watchAll"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+      "jest": true
+    },
+    "rules": {
+      "react/forbid-prop-types": 0,
+      "react/destructuring-assignment": 0,
+      "react/jsx-one-expression-per-line": 0
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.md?$": "markdown-loader-jest",
+      ".*": "<rootDir>/node_modules/jest-css-modules"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test-setup.js"
   },
   "dependencies": {
-    "express": "^4.14.0",
-    "next": "latest",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "@material-ui/core": "^1.5.1",
+    "@material-ui/icons": "^2.0.3",
+    "@zeit/next-sass": "^0.2.0",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mobx": "^5.0.4",
+    "mobx-react": "^5.2.5",
+    "mobx-react-devtools": "^6.0.3",
+    "mobx-remotedev": "^0.2.8",
+    "next": "^6.1.1",
+    "node-sass": "^4.9.3",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "victory": "^30.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-root-import": "^4.1.8",
+    "classnames": "^2.2.6",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0",
+    "jest-css-modules": "^1.1.0",
+    "jest-enzyme": "^6.0.3",
+    "markdown-loader-jest": "^0.1.1",
+    "prettier": "1.14.2",
+    "prettier-eslint": "^8.8.2",
+    "raw-loader": "^0.5.1",
+    "react-markdown": "^3.5.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0"
   }
 }
