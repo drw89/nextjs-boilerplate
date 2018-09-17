@@ -8,6 +8,16 @@ pipeline {
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
+      stage('Build') {
+          steps {
+              echo 'Building..'
+          }
+      }
+      stage('Test') {
+          steps {
+              echo 'Testing..'
+          }
+      }
       stage('CI Build and push snapshot') {
         when {
           branch 'PR-*'
