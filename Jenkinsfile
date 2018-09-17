@@ -8,16 +8,12 @@ pipeline {
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
-      stage('Build') {
-          steps {
-              echo 'Building..'
-          }
-      }
-      stage('Test') {
+      stage('build and test') {
           steps {
             container('nodejs') {
               sh "npm install"
               sh "npm run-script lint"
+              sh "npm run-script test"
             }
           }
       }
