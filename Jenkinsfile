@@ -15,7 +15,10 @@ pipeline {
       }
       stage('Test') {
           steps {
-              echo 'Testing..'
+            container('nodejs') {
+              sh "npm install"
+              sh "npm run-script lint"
+            }
           }
       }
       stage('CI Build and push snapshot') {
