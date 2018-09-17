@@ -30,4 +30,8 @@ describe('Organism: Header', () => {
   test('Should close the menu', () => {
     expect(true);
   });
+
+  test('Should close the menu 2', () => {
+    expect(true);
+  });
 });
