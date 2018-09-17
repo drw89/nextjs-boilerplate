@@ -1,5 +1,7 @@
 # dashboard-boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/drw89/test-domi.svg)](https://greenkeeper.io/)
+
 A simple React boilerplate used for creating any kind of dashboard interacting with the micro-services architecture at Interdiscount.
 
 ## Getting Started
