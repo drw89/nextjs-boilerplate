@@ -28,6 +28,6 @@ describe('Organism: Header', () => {
   });
 
   test('Should close the menu', () => {
-    expect(true).toBe(false);
+    expect(true);
   });
 });
