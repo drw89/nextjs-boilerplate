@@ -15,10 +15,10 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "./node_modules/.bin/eslint .",
-    "test": "./node_modules/.bin/jest",
-    "test:fast": "./node_modules/.bin/jest -o",
-    "test:watch": "./node_modules/.bin/jest --watchAll"
+    "lint": "eslint .",
+    "test": "jest",
+    "test:fast": "jest -o",
+    "test:watch": "jest --watchAll"
   },
   "eslintConfig": {
     "extends": "airbnb",
