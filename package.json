@@ -49,6 +49,7 @@
     "@material-ui/icons": "^2.0.3",
     "@zeit/next-sass": "^0.2.0",
     "express": "^4.16.3",
+    "jss": "^9.8.7",
     "lodash": "^4.17.10",
     "mobx": "^5.0.4",
     "mobx-react": "^5.2.5",
@@ -59,6 +60,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-jss": "^8.6.1",
+    "styled-jsx": "^3.0.2",
     "victory": "^30.3.0"
   },
   "devDependencies": {
